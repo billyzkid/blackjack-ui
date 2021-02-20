@@ -265,15 +265,15 @@ button {
     position: relative;
     min-width: 150px;
     /* margin: 0 10px; */
-    /* transition: all 0.25s; */
+    transition: all 0.25s;
 }
 
 .player {
-    transform: translateY(50px);
+    transform: translate3d(0,50px,0);
 }
 
 .player.primary {
-    transform: translateY(-50px) scale(1.2);
+    transform: translate3d(0,-50px,0) scale3d(1.2,1.2,1.2);
 }
 
 .input-container {
@@ -294,12 +294,22 @@ button {
     box-sizing: border-box;
 }
 
-.hand {
+.hand,
+.split-hand {
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     height: 150px;
+    transition: all 0.25s;
+}
+
+.split-hand:nth-child(1) {
+    transform: translate3d(-20px,-10px,0);
+}
+
+.split-hand:nth-child(2) {
+    transform: translate3d(20px,10px,0);
 }
 
 .card {
@@ -311,7 +321,7 @@ button {
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 6px;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 25%);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 
 .card.deal {
@@ -324,14 +334,14 @@ button {
 
 @keyframes deal-animation {
     0% {
-        transform: translate3d(0, -100vh, 0) rotate(60deg) scale(1.5);
-        box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+        transform: translate3d(0,-100vh,0) rotate3d(0,0,1,60deg) scale3d(1.5,1.5,1.5);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     }
 }
 
 @keyframes flip-animation {
     0% {
-        transform: perspective(250px) rotateY(180deg);
+        transform: perspective(250px) rotate3d(0,1,0,180deg);
     }
 }
 
