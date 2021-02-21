@@ -10,6 +10,7 @@ body {
     font-size: 1em;
     font-weight: 400;
     color: black;
+    background-color: black;
     margin: 0;
 }
 
@@ -170,7 +171,7 @@ button {
 }
 
 .bet-input {
-    width: 3em;
+    width: 4.6em;
 }
 
 .hud-container {
