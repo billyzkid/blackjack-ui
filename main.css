@@ -420,12 +420,28 @@ button {
 
 @media (orientation: landscape) {
     body {
-        font-size: 2.5vh;
+        font-size: 2vh;
     }
 }
 
 @media (orientation: portrait) {
     body {
-        font-size: 2.5vw;
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .player:nth-child(1) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate3d(-3em,-10em,0) rotate3d(0,0,1,45deg) scale3d(0.7,0.7,0.7);
+    }
+
+    .player:nth-child(5) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate3d(3em,-10em,0) rotate3d(0,0,-1,45deg) scale3d(0.7,0.7,0.7);
     }
 }
