@@ -10,7 +10,7 @@ body {
     font-size: 1em;
     font-weight: 400;
     color: black;
-    background-color: black;
+    background-color: silver;
     margin: 0;
 }
 
@@ -68,7 +68,7 @@ button {
     background-repeat: no-repeat;
     width: 100%;
     padding: 0.625em;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .table > h1 {
