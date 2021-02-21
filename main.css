@@ -37,17 +37,17 @@ button {
 
 #table-container {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 1.25em;
     grid-auto-flow: row;
     flex-grow: 1;
-    padding: 10px;
+    padding: 1.25em;
 }
 
 #debug-container {
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    padding: 10px;
+    gap: 0.25em;
+    padding: 1.25em;
     border-left: 1px solid #d0d0d0;
     background-color: #f3f3f3;
     overflow: auto;
@@ -65,7 +65,7 @@ button {
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    padding: 10px;
+    padding: 0.625em;
     overflow: hidden;
 }
 
@@ -73,7 +73,7 @@ button {
     font-family: 'Monsieur La Doulaise', cursive;
     font-size: 3em;
     text-align: center;
-    margin: 10px 0 0;
+    margin: 0.416667em 0;
 }
 
 .table p {
@@ -96,7 +96,12 @@ button {
 }
 
 .table input::placeholder {
-    visibility: hidden;
+    color: rgba(255,255,255,0.2);
+    text-shadow: none;
+}
+
+.table input[type=number]::-webkit-inner-spin-button {
+    cursor: pointer;
 }
 
 .table button {
@@ -153,8 +158,8 @@ button {
 
 .input-container input,
 .input-container button {
-    font-size: 1.2em;
-    margin: 1px 5px;
+    font-size: 1.25em;
+    margin: 0.05em 0.25em;
 }
 
 .bet-container::before {
@@ -167,23 +172,23 @@ button {
     width: 100%;
     font-family: 'Dosis', sans-serif;
     font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 0.1em;
 }
 
 .hud-container,
 .input-container,
 .player-container {
-    margin: 10px 0;
+    margin: 1.25em 0;
 }
 
 .dealer-container {
-    margin: 5px 0;
+    margin: 0.625em 0;
 }
 
 .hud-container p:nth-child(2) {
     font-size: 1.1em;
     font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 0.15em;
 }
 
 .money-container,
@@ -213,7 +218,7 @@ button {
 .primary-player-total,
 .dealer-total,
 .message {
-    margin: 0 20px;
+    margin: 0 1.5625em;
 }
 
 .primary-player-chips,
@@ -263,17 +268,17 @@ button {
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    min-width: 150px;
-    /* margin: 0 10px; */
+    min-width: 9.375em;
+    /* margin: 0 0.625em; */
     transition: all 0.25s;
 }
 
 .player {
-    transform: translate3d(0,50px,0);
+    transform: translate3d(0,3.5em,0);
 }
 
 .player.primary {
-    transform: translate3d(0,-50px,0) scale3d(1.2,1.2,1.2);
+    transform: translate3d(0,-3.5em,0) scale3d(1.2,1.2,1.2);
 }
 
 .input-container {
@@ -287,9 +292,9 @@ button {
 
 .seat {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    border: 7px solid rgba(255,255,255,0.5);
+    width: 9.375em;
+    height: 9.375em;
+    border: 0.4375em solid rgba(255,255,255,0.5);
     border-radius: 50%;
     box-sizing: border-box;
 }
@@ -300,27 +305,27 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 150px;
+    height: 9.375em;
     transition: all 0.25s;
 }
 
 .split-hand:nth-child(1) {
-    transform: translate3d(-20px,-10px,0);
+    transform: translate3d(-1.25em,-0.625,0);
 }
 
 .split-hand:nth-child(2) {
-    transform: translate3d(20px,10px,0);
+    transform: translate3d(1.25em,0.625em,0);
 }
 
 .card {
-    width: 100px;
-    height: 140px;
-    margin: 5px -40px;
+    width: 6.25em;
+    height: 8.75em;
+    margin: 0.3125em -2.5em;
     background-color: white;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    border-radius: 6px;
+    border-radius: 0.375em;
     box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 
@@ -349,7 +354,7 @@ button {
     position: relative;
     width: 90%;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125em;
 }
 
 .player-name {
