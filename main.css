@@ -327,6 +327,24 @@ button {
     transform: translate3d(1.25em,0.625em,0);
 }
 
+.hand.active::before,
+.split-hand.active::before {
+    content: '';
+    border-top: 0.625em solid goldenrod;
+    border-left: 0.625em solid transparent;
+    border-right: 0.625em solid transparent;
+    position: absolute;
+    top: -0.3125em;
+    left: 25%;
+    animation: bouncing 0.75s ease-in-out infinite;
+}
+  
+@keyframes bouncing {
+    50% {
+        top: -1em;
+    }
+}
+
 .card {
     width: 6.25em;
     height: 8.75em;
