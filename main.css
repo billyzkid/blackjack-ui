@@ -10,11 +10,7 @@ body {
     font-size: 1em;
     font-weight: 400;
     color: black;
-    background-color: black;
-    background-image: url('images/table.jpg');
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    background-color: white; /* Consider black for iOS */
     margin: 0;
 }
 
@@ -65,10 +61,14 @@ button {
     align-items: center;
     color: white;
     text-shadow: 1px 1px 1px black;
- 
+    background-color: black;
+    background-image: url('images/table.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
     width: 100%;
     padding: 0.625em;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .table > h1 {
