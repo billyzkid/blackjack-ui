@@ -169,6 +169,10 @@ button {
     content: '$';
 }
 
+.bet-input {
+    width: 3em;
+}
+
 .hud-container {
     display: flex;
     flex-direction: row;
