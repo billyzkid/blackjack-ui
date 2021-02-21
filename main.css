@@ -320,7 +320,7 @@ button {
 }
 
 .split-hand:nth-child(1) {
-    transform: translate3d(-1.25em,-0.625,0);
+    transform: translate3d(-1.25em,-0.625em,0);
 }
 
 .split-hand:nth-child(2) {
