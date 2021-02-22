@@ -10,6 +10,15 @@ $(document).ready(function() {
     preloadImages();
     shuffle(shoe);
 
+    $.fn.popup.defaults.pagecontainer = '.table';
+    $.fn.popup.defaults.transition = 'all 0.3s';
+
+    $('#info-popup-content').popup();
+    $('#user-popup-content').popup();
+    $('#chat-popup-content').popup();
+    $('#sound-popup-content').popup();
+    $('#quit-popup-content').popup();
+
     function createDeck() {
         const deck = [];
 

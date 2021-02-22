@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Blackjack.io</title>
+        <link rel="shortcut icon" href="favicon.ico">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Dosis:wght@200;300;600&family=Monsieur+La+Doulaise&family=Montserrat&display=swap">
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
         <link rel="stylesheet" href="main.css" />
     </head>
     <body>
@@ -148,7 +149,30 @@
                 </div>
             </div>
         </div>
+        <div id="menu">
+            <i id="info-menu-item" class="fas fa-info-circle info-popup-content_open"></i>
+            <i id="user-menu-item" class="fas fa-user-circle user-popup-content_open"></i>
+            <i id="chat-menu-item" class="fas fa-comment-alt chat-popup-content_open"></i>
+            <i id="sound-menu-item" class="fas fa-volume-up sound-popup-content_open"></i>
+            <i id="quit-menu-item" class="fas fa-sign-out-alt quit-popup-content_open"></i>
+        </div>
+        <div id="info-popup-content">
+            {{ Info Content }}
+        </div>
+        <div id="user-popup-content">
+            {{ User Content }}
+        </div>
+        <div id="chat-popup-content">
+            {{ Chat Content }}
+        </div>
+        <div id="sound-popup-content">
+            {{ Sound Content }}
+        </div>
+        <div id="quit-popup-content">
+            {{ Quit Content }}
+        </div>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
         <script src="main.js"></script>
     </body>
 </html>
