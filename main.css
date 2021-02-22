@@ -74,14 +74,31 @@ button {
     color: goldenrod;
 }
 
+#info-popup-content {
+    font-weight: 300;
+}
+
+#info-popup-content :first-child  {
+    margin-top: 0;
+}
+
+#info-popup-content :last-child {
+    margin-bottom: 0;
+}
+
 .popup_content {
     display: none;
-    background-color: red;
-    transform: scale(0.8);
+    color: white;
+    background-color: black;
+    width: 50%;
+    height: 50%;
+    padding: 2em;
+    overflow: auto;
+    transform: scale3d(0.8,0.8,0.8);
 }
 
 .popup_wrapper_visible .popup_content {
-    transform: scale(1);
+    transform: scale3d(1,1,1);
 }
 
 .table {
