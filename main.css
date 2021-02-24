@@ -9,17 +9,97 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     font-weight: 400;
-    color: black;
-    background-color: white; /* Consider black for iOS */
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    background-color: black;
     margin: 0;
     overflow: hidden;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+}
+
 input,
 button {
-    font-family: inherit;
+    font-family: 'Caudex', serif;
     font-size: inherit;
-    font-weight: inherit;
+    font-weight: 700;
+    color: inherit;
+    text-shadow: inherit;
+}
+
+input {
+    padding: 0.2em 0.4em;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.3em;
+    outline: none;
+    -webkit-appearance: none; /* Removes the inner shadow in iOS */
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.1);
+    text-shadow: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    cursor: pointer;
+}
+
+button {
+    color: rgba(62,62,62,1);
+    text-shadow: 0 1px 1px rgba(191,191,191,1);
+    text-transform: uppercase;
+    padding: 0.2em 0.8em;
+    background-image: linear-gradient(160deg, #565656, #626262, #d0d0d0, #6b6b6b, #565656);
+    background-size: 100% 100%;
+    background-position: center;
+    border: 1px solid #565656;
+    border-radius: 0.3em;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(65,65,65,0.4), inset 0 -2px 5px 1px rgba(73,73,73,1), inset 0 -1px 1px 3px rgba(191,191,191,1);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+button:focus,
+button:hover:enabled {
+    color: rgba(62,62,62,0.8);
+    background-size: 150% 150%;
+    border-color: rgba(86,86,86,0.6);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23), inset 0 -2px 5px 1px #606060, inset 0 -1px 1px 3px rgba(191,191,191,1);
+}
+
+button:active:enabled {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(65,65,65,0.4), inset 0 -2px 5px 1px #606060, inset 0 -1px 1px 3px rgba(191,191,191,1);
+}
+
+button:disabled {
+    opacity: 0.2;
+    cursor: default;
+}
+
+button.gold {
+    color: rgba(120,50,5,1);
+    text-shadow: 0 1px 1px rgba(250,227,133,1);
+    background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+    border-color: #a55d07;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(110,80,20,0.4), inset 0 -2px 5px 1px rgba(139,66,8,1), inset 0 -1px 1px 3px rgba(250,227,133,1);
+}
+
+button.gold:focus,
+button.gold:hover:enabled {
+    color: rgba(120,50,5,0.8);
+    border-color: rgba(165,93,7,0.6);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23), inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250,227,133,1);
+}
+
+button.gold:active:enabled {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(110,80,20,0.4), inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250,227,133,1);
 }
 
 #main-container {
@@ -80,8 +160,6 @@ button {
 }
 
 .popup_content {
-    display: none;
-    color: white;
     font-weight: 300;
     background-color: black;
     width: 50%;
@@ -95,18 +173,20 @@ button {
     transform: scale3d(1,1,1);
 }
 
-#info-popup-content h1,
-#info-popup-content h2,
-#info-popup-content h3,
-#info-popup-content h4 {
-    font-weight: 600;
+#info-popup-content,
+#new-user-popup-content,
+#edit-user-popup-content,
+#chat-popup-content,
+#sound-popup-content,
+#quit-popup-content {
+    display: none;
 }
 
-#info-popup-content h1 {
+#info-popup-content > h1 {
     margin: 0;
 }
 
-#info-popup-content h1 + p {
+#info-popup-content > h1 + p {
     font-size: 0.8em;
     margin: 0;
 }
@@ -125,9 +205,9 @@ button {
     background-color: transparent;
 }
 
-#new-user-popup-content p,
-#edit-user-popup-content p,
-#quit-popup-content p {
+#new-user-popup-content > p,
+#edit-user-popup-content > p,
+#quit-popup-content > p {
     text-align: center;
     margin: 0 0 1em;
 }
@@ -137,9 +217,6 @@ button {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    background-color: black;
     background-image: url('images/table.jpg');
     background-size: cover;
     background-position: bottom;
@@ -161,85 +238,6 @@ button {
 
 .table p {
     margin: 0;
-}
-
-input,
-button {
-    font-family: 'Caudex', serif;
-    font-size: inherit;
-    font-weight: 700;
-}
-
-input {
-    color: white;
-    text-shadow: inherit;
-    padding: 0.2em;
-    background-color: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 0.3em;
-    outline: none;
-    -webkit-appearance: none; /* Removes the shadow in iOS */
-}
-
-input::placeholder {
-    color: rgba(255,255,255,0.2);
-    text-shadow: none;
-}
-
-input[type=number]::-webkit-inner-spin-button {
-    cursor: pointer;
-}
-
-button {
-    color: rgba(62,62,62,1);
-    text-transform: uppercase;
-    text-shadow: 0 1px 1px rgba(191,191,191,1);
-    padding: 0.2em 0.8em;
-    background-image: linear-gradient(160deg, #565656, #626262, #d0d0d0, #6b6b6b, #565656);
-    background-size: 100% 100%;
-    background-position: center;
-    border: 1px solid #565656;
-    border-radius: 0.3em;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(65,65,65,0.4), inset 0 -2px 5px 1px rgba(73,73,73,1), inset 0 -1px 1px 3px rgba(191,191,191,1);
-    cursor: pointer;
-    outline: none;
-    transition: all 0.2s ease-in-out;
-}
-
-button:focus,
-button:hover:enabled {
-    color: rgba(62,62,62,0.8);
-    background-size: 150% 150%;
-    border-color: rgba(86,86,86,0.6);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23), inset 0 -2px 5px 1px #606060, inset 0 -1px 1px 3px rgba(191,191,191,1);
-}
-
-button:active:enabled {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(65,65,65,0.4), inset 0 -2px 5px 1px #606060, inset 0 -1px 1px 3px rgba(191,191,191,1);
-}
-
-button:disabled {
-    opacity: 0.2;
-    cursor: default;
-}
-
-button.gold {
-    color: rgba(120,50,5,1);
-    text-shadow: 0 1px 1px rgba(250,227,133,1);
-    background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
-    border-color: #a55d07;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(110,80,20,0.4), inset 0 -2px 5px 1px rgba(139,66,8,1), inset 0 -1px 1px 3px rgba(250,227,133,1);
-}
-
-button.gold:focus,
-button.gold:hover:enabled {
-    color: rgba(120,50,5,0.8);
-    border-color: rgba(165,93,7,0.6);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23), inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250,227,133,1);
-}
-
-button.gold:active:enabled {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(110,80,20,0.4), inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250,227,133,1);
 }
 
 .button-container input,
