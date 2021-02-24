@@ -156,16 +156,17 @@ button.gold:active:enabled {
 }
 
 .popup_wrapper {
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 
 .popup_content {
     font-weight: 300;
     background-color: black;
-    width: 50%;
-    height: 50%;
+    width: 66.666666%;
+    height: 66.666666%;
     padding: 2em;
     overflow: auto;
+    box-sizing: border-box;
     transform: scale3d(0.8,0.8,0.8);
 }
 
@@ -202,7 +203,7 @@ button.gold:active:enabled {
 #quit-popup-content {
     width: auto;
     height: auto;
-    background-color: transparent;
+    background: none;
 }
 
 #new-user-popup-content > p,
