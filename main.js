@@ -7,14 +7,11 @@ $(document).ready(function() {
     const deck = createDeck();
     const shoe = createShoe();
 
-    preloadImages();
-    shuffle(shoe);
-
     $.fn.popup.defaults.pagecontainer = '.table';
     $.fn.popup.defaults.transition = 'all 0.3s';
 
     $('#info-popup-content').popup({ openelement: '#info-menu-item', onopen: () => $('#info-menu-item').addClass('active'), onclose: () => $('#info-menu-item').removeClass('active') });
-    $('#user-popup-content').popup({ openelement: '#user-menu-item', onopen: () => $('#user-menu-item').addClass('active'), onclose: () => $('#user-menu-item').removeClass('active') });
+    $('#edit-user-popup-content').popup({ openelement: '#edit-user-menu-item', onopen: () => $('#edit-user-menu-item').addClass('active'), onclose: () => $('#edit-user-menu-item').removeClass('active') });
     $('#chat-popup-content').popup({ openelement: '#chat-menu-item', onopen: () => $('#chat-menu-item').addClass('active'), onclose: () => $('#chat-menu-item').removeClass('active') });
     $('#sound-popup-content').popup({ openelement: '#sound-menu-item', onopen: () => $('#sound-menu-item').addClass('active'), onclose: () => $('#sound-menu-item').removeClass('active') });
     $('#quit-popup-content').popup({ openelement: '#quit-menu-item', onopen: () => $('#quit-menu-item').addClass('active'), onclose: () => $('#quit-menu-item').removeClass('active') });
@@ -43,9 +40,9 @@ $(document).ready(function() {
         return shoe;
     }
 
-    // Fisher-Yates shuffle implementation:
-    // https://javascript.info/task/shuffle
     function shuffle(array) {
+        // Fisher-Yates shuffle implementation:
+        // https://javascript.info/task/shuffle
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [ array[i], array[j] ] = [ array[j], array[i] ];
@@ -58,4 +55,9 @@ $(document).ready(function() {
         
         $('head').append(imageLinks);
     }
+
+    preloadImages();
+    shuffle(shoe);
+
+    $('#new-user-popup-content').popup('show');
 });

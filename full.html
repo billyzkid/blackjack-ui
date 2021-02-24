@@ -151,7 +151,7 @@
         </div>
         <div id="menu">
             <i id="info-menu-item" class="fas fa-info-circle"></i>
-            <i id="user-menu-item" class="fas fa-user-circle"></i>
+            <i id="edit-user-menu-item" class="fas fa-user-circle"></i>
             <i id="chat-menu-item" class="fas fa-comment-alt"></i>
             <i id="sound-menu-item" class="fas fa-volume-up"></i>
             <i id="quit-menu-item" class="fas fa-sign-out-alt"></i>
@@ -487,11 +487,18 @@
             <a href="#blackjack-rules-of-the-game">Back to top</a>
             
         </div>
-        <div id="user-popup-content">
+        <div id="new-user-popup-content">
+            <p>What's your name?</p>
+            <div class="button-container">
+                <input id="new-name-input" type="text" minlength="1" maxlength="20" size="15" placeholder="Name">
+                <button id="new-name-button">Go</button>
+            </div>
+        </div>
+        <div id="edit-user-popup-content">
             <p>Don't like being called Will?</p>
             <div class="button-container">
-                <input id="name-input" type="text" minlength="1" maxlength="20" size="10" placeholder="Name">
-                <button id="change-name-button">Change</button>
+                <input id="edit-name-input" type="text" minlength="1" maxlength="20" size="15" placeholder="Name">
+                <button id="edit-name-button">Change</button>
             </div>
         </div>
         <div id="chat-popup-content">

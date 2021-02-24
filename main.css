@@ -117,14 +117,16 @@ button {
     height: 100%;
 }
 
-#user-popup-content,
+#new-user-popup-content,
+#edit-user-popup-content,
 #quit-popup-content {
     width: auto;
     height: auto;
     background-color: transparent;
 }
 
-#user-popup-content p,
+#new-user-popup-content p,
+#edit-user-popup-content p,
 #quit-popup-content p {
     text-align: center;
     margin: 0 0 1em;
