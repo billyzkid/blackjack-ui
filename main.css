@@ -174,6 +174,7 @@ button.gold:active:enabled {
     transform: scale3d(1,1,1);
 }
 
+#insurance-popup-content,
 #info-popup-content,
 #new-user-popup-content,
 #edit-user-popup-content,
@@ -198,6 +199,7 @@ button.gold:active:enabled {
     height: 100%;
 }
 
+#insurance-popup-content,
 #new-user-popup-content,
 #edit-user-popup-content,
 #quit-popup-content {
@@ -206,6 +208,7 @@ button.gold:active:enabled {
     background: none;
 }
 
+#insurance-popup-content > p,
 #new-user-popup-content > p,
 #edit-user-popup-content > p,
 #quit-popup-content > p {

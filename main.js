@@ -10,6 +10,7 @@ $(document).ready(function() {
     $.fn.popup.defaults.pagecontainer = '.table';
     $.fn.popup.defaults.transition = 'all 0.3s';
 
+    $('#insurance-popup-content').popup();
     $('#info-popup-content').popup({ openelement: '#info-menu-item', onopen: () => $('#info-menu-item').addClass('active'), onclose: () => $('#info-menu-item').removeClass('active') });
     $('#new-user-popup-content').popup({ focuselement: '#new-name-input', blur: false, escape: false, autoopen: true });
     $('#edit-user-popup-content').popup({ focuselement: '#edit-name-input', openelement: '#edit-user-menu-item', onopen: () => $('#edit-user-menu-item').addClass('active'), onclose: () => $('#edit-user-menu-item').removeClass('active') });
