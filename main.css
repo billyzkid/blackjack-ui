@@ -191,7 +191,7 @@ button.gold:active:enabled {
     margin: 0;
 }
 
-#sound-popup-content iframe {
+#sound-popup-content > iframe {
     display: block;
     width: 100%;
     height: 100%;

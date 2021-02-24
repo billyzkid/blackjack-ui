@@ -59,4 +59,6 @@ $(document).ready(function() {
 
     preloadImages();
     shuffle(shoe);
+
+    $('#new-name-button').on('click', () => $('#new-user-popup-content').popup('hide'));
 });
