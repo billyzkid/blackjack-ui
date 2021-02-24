@@ -214,6 +214,7 @@ button.gold:active:enabled {
 }
 
 .table {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
