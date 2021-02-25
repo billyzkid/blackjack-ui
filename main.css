@@ -126,9 +126,16 @@ button.gold:active:enabled {
 
 ::-webkit-scrollbar {
     width: 20px;
+    height: 20px;
 }
 
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
     background-color: transparent;
 }
 
