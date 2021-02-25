@@ -150,6 +150,7 @@ button.gold:active:enabled {
 }
 
 #main-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -166,20 +167,11 @@ button.gold:active:enabled {
 
 #table-container {
     display: grid;
-    grid-gap: 1.25em;
     grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1px;
     flex-grow: 1;
-    padding: 1.25em;
-}
-
-#debug-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25em;
-    padding: 1.25em;
-    border-left: 1px solid #d0d0d0;
-    background-color: #f3f3f3;
-    overflow: auto;
+    padding: 0;
 }
 
 #menu {
@@ -202,6 +194,25 @@ button.gold:active:enabled {
     color: goldenrod;
 }
 
+#debug-container {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    font-size: 0.8em;
+    padding: 0.2em;
+    /* border-left: 1px solid #d0d0d0; */
+    background-color: #f3f3f3;
+    overflow: auto;
+}
+
+#debug-container > button {
+    margin: 0.2em;
+}
+
+#popup-container {
+    display: none;
+}
+
 .popup_wrapper {
     backdrop-filter: blur(5px);
 }
@@ -217,24 +228,15 @@ button.gold:active:enabled {
     transform: scale3d(0.8,0.8,0.8);
 }
 
-.popup_wrapper_visible .popup_content {
+.popup_wrapper_visible > .popup_content {
     transform: scale3d(1,1,1);
 }
 
-#insurance-popup-content,
-#info-popup-content,
-#new-user-popup-content,
-#edit-user-popup-content,
-#chat-popup-content,
-#sound-popup-content,
-#quit-popup-content {
-    display: none;
-}
-
-#info-popup-content h1::before,
-#info-popup-content h2::before,
-#info-popup-content h3::before,
-#info-popup-content h4::before {
+/* Avoids "butting head" issue when anchor is clicked */
+#info-popup > h1::before,
+#info-popup > h2::before,
+#info-popup > h3::before,
+#info-popup > h4::before {
     display: block;
     content: '';
     height: 1em;
@@ -243,34 +245,35 @@ button.gold:active:enabled {
     pointer-events: none;
 }
 
-#info-popup-content > h1 {
+#info-popup > h1 {
     margin: 0;
 }
 
-#info-popup-content > h1 + p {
+#info-popup > h1 + p {
     font-size: 0.8em;
     margin: 0;
 }
 
-#sound-popup-content > iframe {
+#sound-popup > iframe {
     display: block;
     width: 100%;
     height: 100%;
+    border: none;
 }
 
-#insurance-popup-content,
-#new-user-popup-content,
-#edit-user-popup-content,
-#quit-popup-content {
+#insurance-popup,
+#new-user-popup,
+#edit-user-popup,
+#quit-popup {
     width: auto;
     height: auto;
     background: none;
 }
 
-#insurance-popup-content > p,
-#new-user-popup-content > p,
-#edit-user-popup-content > p,
-#quit-popup-content > p {
+#insurance-popup > p,
+#new-user-popup > p,
+#edit-user-popup > p,
+#quit-popup > p {
     text-align: center;
     margin: 0 0 1em;
 }
@@ -434,10 +437,11 @@ button.gold:active:enabled {
 
 .player.primary {
     transform: translate3d(0,-2.5em,0) scale3d(1.2,1.2,1.2);
+    z-index: 1; /* Above other players, but below input buttons */
 }
 
 .input-container {
-    z-index: 1;
+    z-index: 2; /* Above primary player */
 }
 
 .player.primary .seat,
@@ -483,7 +487,7 @@ button.gold:active:enabled {
     left: 25%;
     animation: bouncing 0.8s ease-in-out infinite;
 }
-  
+
 @keyframes bouncing {
     50% {
         top: -0.7em;
@@ -789,7 +793,7 @@ button.gold:active:enabled {
     .player:nth-child(5) .player-name {
         text-align: right;
     }
-    
+
     .player.active:nth-child(1) .player-name,
     .player.active:nth-child(2) .player-name {
         background-image: linear-gradient(to right, rgba(218,165,32,0.5), rgba(218,165,32,0));

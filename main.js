@@ -7,16 +7,25 @@ $(document).ready(function() {
     const deck = createDeck();
     const shoe = createShoe();
 
-    $.fn.popup.defaults.pagecontainer = '.table';
+    $.fn.popup.defaults.pagecontainer = '#main-container, #debug-container';
     $.fn.popup.defaults.transition = 'all 0.3s';
 
-    $('#insurance-popup-content').popup();
-    $('#info-popup-content').popup({ openelement: '#info-menu-item', onopen: () => $('#info-menu-item').addClass('active'), onclose: () => $('#info-menu-item').removeClass('active') });
-    $('#new-user-popup-content').popup({ focuselement: '#new-name-input', blur: false, escape: false, autoopen: true });
-    $('#edit-user-popup-content').popup({ focuselement: '#edit-name-input', openelement: '#edit-user-menu-item', onopen: () => $('#edit-user-menu-item').addClass('active'), onclose: () => $('#edit-user-menu-item').removeClass('active') });
-    $('#chat-popup-content').popup({ openelement: '#chat-menu-item', onopen: () => $('#chat-menu-item').addClass('active'), onclose: () => $('#chat-menu-item').removeClass('active') });
-    $('#sound-popup-content').popup({ openelement: '#sound-menu-item', onopen: () => $('#sound-menu-item').addClass('active'), onclose: () => $('#sound-menu-item').removeClass('active') });
-    $('#quit-popup-content').popup({ openelement: '#quit-menu-item', onopen: () => $('#quit-menu-item').addClass('active'), onclose: () => $('#quit-menu-item').removeClass('active') });
+    $('#insurance-popup').popup({ blur: false, escape: false });
+    $('#info-popup').popup({ openelement: '#info-menu-item', onopen: () => $('#info-menu-item').addClass('active'), onclose: () => $('#info-menu-item').removeClass('active') });
+    $('#new-user-popup').popup({ focuselement: '#new-name-input', blur: false, escape: false, autoopen: true });
+    $('#edit-user-popup').popup({ focuselement: '#edit-name-input', openelement: '#edit-user-menu-item', onopen: () => $('#edit-user-menu-item').addClass('active'), onclose: () => $('#edit-user-menu-item').removeClass('active') });
+    $('#chat-popup').popup({ openelement: '#chat-menu-item', onopen: () => $('#chat-menu-item').addClass('active'), onclose: () => $('#chat-menu-item').removeClass('active') });
+    $('#sound-popup').popup({ openelement: '#sound-menu-item', onopen: () => $('#sound-menu-item').addClass('active'), onclose: () => $('#sound-menu-item').removeClass('active') });
+    $('#quit-popup').popup({ openelement: '#quit-menu-item', onopen: () => $('#quit-menu-item').addClass('active'), onclose: () => $('#quit-menu-item').removeClass('active') });
+    
+    $('#popup-container').remove();
+
+    $('#yes-insurance-button').on('click', () => $('#insurance-popup').popup('hide'));
+    $('#no-insurance-button').on('click', () => $('#insurance-popup').popup('hide'));
+    $('#new-name-button').on('click', () => $('#new-user-popup').popup('hide'));
+    $('#edit-name-button').on('click', () => $('#edit-user-popup').popup('hide'));
+    $('#yes-quit-button').on('click', () => $('#quit-popup').popup('hide'));
+    $('#no-quit-button').on('click', () => $('#quit-popup').popup('hide'));
 
     function createDeck() {
         const deck = [];
@@ -60,6 +69,4 @@ $(document).ready(function() {
 
     preloadImages();
     shuffle(shoe);
-
-    $('#new-name-button').on('click', () => $('#new-user-popup-content').popup('hide'));
 });
