@@ -16,6 +16,26 @@ body {
     overflow: hidden;
 }
 
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: underline;
+}
+
+
+a:link,
+a:visited {
+    color: green;
+}
+
+a:hover,
+a:active {
+    color: lightgreen;
+}
+
 h1,
 h2,
 h3,
