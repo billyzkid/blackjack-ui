@@ -39,7 +39,9 @@ a:active {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
     font-weight: 600;
 }
 
@@ -220,6 +222,18 @@ button.gold:active:enabled {
 #sound-popup-content,
 #quit-popup-content {
     display: none;
+}
+
+#info-popup-content h1::before,
+#info-popup-content h2::before,
+#info-popup-content h3::before,
+#info-popup-content h4::before {
+    display: block;
+    content: '';
+    height: 1em;
+    margin-top: -1em;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 #info-popup-content > h1 {
