@@ -218,19 +218,24 @@ button.gold:active:enabled {
 }
 
 .popup_content {
-    font-weight: 300;
-    width: 66.666666%;
-    height: 66.666666%;
-    padding: 2em;
-    background-color: black;
-    box-shadow: 0 10px 30px black;
-    box-sizing: border-box;
-    overflow: auto;
     transform: scale3d(0.8,0.8,0.8);
 }
 
 .popup_wrapper_visible > .popup_content {
     transform: scale3d(1,1,1);
+}
+
+#info-popup,
+#chat-popup,
+#sound-popup {
+    font-weight: 300;
+    width: 66.666666%;
+    height: 66.666666%;
+    padding: 2em;
+    background-color: black;
+    box-shadow: 0 1em 3em black;
+    box-sizing: border-box;
+    overflow: auto;
 }
 
 #info-popup > h1 {
@@ -270,18 +275,14 @@ button.gold:active:enabled {
 #new-user-popup,
 #edit-user-popup,
 #quit-popup {
-    width: auto;
-    height: auto;
-    padding: 0;
-    background: none;
-    box-shadow: none;
+    font-weight: 300;
+    text-align: center !important; /* Prevents inline style from overriding this */
 }
 
 #insurance-popup > p,
 #new-user-popup > p,
 #edit-user-popup > p,
 #quit-popup > p {
-    text-align: center;
     margin: 0 0 1em;
 }
 
