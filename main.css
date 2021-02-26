@@ -174,7 +174,7 @@ button.silver:active:enabled {
     flex-shrink: 0;
     font-size: 0.8em;
     padding: 0.2em;
-    /* border-left: 1px solid #d0d0d0; */
+    border-left: 1px solid #d0d0d0;
     background-color: #f3f3f3;
     overflow: auto;
 }
