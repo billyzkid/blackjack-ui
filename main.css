@@ -73,8 +73,7 @@ input[type=number]::-webkit-inner-spin-button {
     cursor: pointer;
 }
 
-button.gold,
-button.silver {
+button {
     text-transform: uppercase;
     padding: 0.2em 0.8em;
     background-size: 100% 100%;
@@ -86,15 +85,12 @@ button.silver {
     transition: all 0.2s ease-in-out;
 }
 
-button.gold:focus,
-button.gold:hover:enabled,
-button.silver:focus,
-button.silver:hover:enabled {
+button:focus,
+button:hover:enabled {
     background-size: 150% 150%;
 }
 
-button.gold:disabled,
-button.silver:disabled {
+button:disabled {
     opacity: 0.2;
     cursor: default;
 }
@@ -147,7 +143,6 @@ button.silver:active:enabled {
 #main-container {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
 }
 
 #main-container > h1 {
@@ -164,7 +159,6 @@ button.silver:active:enabled {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 100%;
     grid-gap: 1px;
-    /* flex-grow: 1; */
     overflow: auto;
 }
 
@@ -534,165 +528,219 @@ button.silver:active:enabled {
 .card.back {
     background-image: url('images/cards/back.png');
 }
+
 .card.ace.spades {
     background-image: url('images/cards/front-0.png');
 }
+
 .card.two.spades {
     background-image: url('images/cards/front-1.png');
 }
+
 .card.three.spades {
     background-image: url('images/cards/front-2.png');
 }
+
 .card.four.spades {
     background-image: url('images/cards/front-3.png');
 }
+
 .card.five.spades {
     background-image: url('images/cards/front-4.png');
 }
+
 .card.six.spades {
     background-image: url('images/cards/front-5.png');
 }
+
 .card.seven.spades {
     background-image: url('images/cards/front-6.png');
 }
+
 .card.eight.spades {
     background-image: url('images/cards/front-7.png');
 }
+
 .card.nine.spades {
     background-image: url('images/cards/front-8.png');
 }
+
 .card.ten.spades {
     background-image: url('images/cards/front-9.png');
 }
+
 .card.jack.spades {
     background-image: url('images/cards/front-10.png');
 }
+
 .card.queen.spades {
     background-image: url('images/cards/front-11.png');
 }
+
 .card.king.spades {
     background-image: url('images/cards/front-12.png');
 }
+
 .card.ace.hearts {
     background-image: url('images/cards/front-13.png');
 }
+
 .card.two.hearts {
     background-image: url('images/cards/front-14.png');
 }
+
 .card.three.hearts {
     background-image: url('images/cards/front-15.png');
 }
+
 .card.four.hearts {
     background-image: url('images/cards/front-16.png');
 }
+
 .card.five.hearts {
     background-image: url('images/cards/front-17.png');
 }
+
 .card.six.hearts {
     background-image: url('images/cards/front-18.png');
 }
+
 .card.seven.hearts {
     background-image: url('images/cards/front-19.png');
 }
+
 .card.eight.hearts {
     background-image: url('images/cards/front-20.png');
 }
+
 .card.nine.hearts {
     background-image: url('images/cards/front-21.png');
 }
+
 .card.ten.hearts {
     background-image: url('images/cards/front-22.png');
 }
+
 .card.jack.hearts {
     background-image: url('images/cards/front-23.png');
 }
+
 .card.queen.hearts {
     background-image: url('images/cards/front-24.png');
 }
+
 .card.king.hearts {
     background-image: url('images/cards/front-25.png');
 }
+
 .card.ace.clubs {
     background-image: url('images/cards/front-26.png');
 }
+
 .card.two.clubs {
     background-image: url('images/cards/front-27.png');
 }
+
 .card.three.clubs {
     background-image: url('images/cards/front-28.png');
 }
+
 .card.four.clubs {
     background-image: url('images/cards/front-29.png');
 }
+
 .card.five.clubs {
     background-image: url('images/cards/front-30.png');
 }
+
 .card.six.clubs {
     background-image: url('images/cards/front-31.png');
 }
+
 .card.seven.clubs {
     background-image: url('images/cards/front-32.png');
 }
+
 .card.eight.clubs {
     background-image: url('images/cards/front-33.png');
 }
+
 .card.nine.clubs {
     background-image: url('images/cards/front-34.png');
 }
+
 .card.ten.clubs {
     background-image: url('images/cards/front-35.png');
 }
+
 .card.jack.clubs {
     background-image: url('images/cards/front-36.png');
 }
+
 .card.queen.clubs {
     background-image: url('images/cards/front-37.png');
 }
+
 .card.king.clubs {
     background-image: url('images/cards/front-38.png');
 }
+
 .card.ace.diamonds {
     background-image: url('images/cards/front-39.png');
 }
+
 .card.two.diamonds {
     background-image: url('images/cards/front-40.png');
 }
+
 .card.three.diamonds {
     background-image: url('images/cards/front-41.png');
 }
+
 .card.four.diamonds {
     background-image: url('images/cards/front-42.png');
 }
+
 .card.five.diamonds {
     background-image: url('images/cards/front-43.png');
 }
+
 .card.six.diamonds {
     background-image: url('images/cards/front-44.png');
 }
+
 .card.seven.diamonds {
     background-image: url('images/cards/front-45.png');
 }
+
 .card.eight.diamonds {
     background-image: url('images/cards/front-46.png');
 }
+
 .card.nine.diamonds {
     background-image: url('images/cards/front-47.png');
 }
+
 .card.ten.diamonds {
     background-image: url('images/cards/front-48.png');
 }
+
 .card.jack.diamonds {
     background-image: url('images/cards/front-49.png');
 }
+
 .card.queen.diamonds {
     background-image: url('images/cards/front-50.png');
 }
+
 .card.king.diamonds {
     background-image: url('images/cards/front-51.png');
 }
+
 .card.joker.black {
     background-image: url('images/cards/front-52.png');
 }
+
 .card.joker.red {
     background-image: url('images/cards/front-53.png');
 }
