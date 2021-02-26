@@ -3,6 +3,16 @@ body {
     height: 100%;
 }
 
+.debug #debug-container,
+.debug #main-container > h1,
+.debug .table:nth-child(n + 2) {
+    display: none !important;
+}
+
+.hide {
+    display: none !important;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
@@ -11,10 +21,6 @@ body {
     text-shadow: 1px 1px 1px black;
     background-color: black;
     margin: 0;
-}
-
-.hide {
-    display: none !important;
 }
 
 a {
