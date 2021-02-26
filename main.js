@@ -7,7 +7,7 @@ $(document).ready(function() {
     const deck = createDeck();
     const shoe = createShoe();
 
-    $.fn.popup.defaults.pagecontainer = '#main-container, #debug-container';
+    $.fn.popup.defaults.pagecontainer = '#page-container';
     $.fn.popup.defaults.transition = 'all 0.3s';
 
     $('#insurance-popup').popup({ blur: false, escape: false });

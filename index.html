@@ -11,287 +11,451 @@
         <link rel="stylesheet" href="main.css" />
     </head>
     <body>
-        <div id="main-container">
-            <h1>Blackjack.io</h1>
-            <div id="table-container">
-                <div id="table1" class="table">
-                    <h1>Table 1</h1>
-                    <div class="dealer-container">
-                        <div class="dealer">
-                            <div class="hand">
-                                <div class="card ace spades deal"></div>
-                                <div class="card back flip"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hud-container">
-                        <div class="money-container">
-                            <div class="primary-player-chips">
-                                <p>Chips</p>
-                                <p>$1000</p>
-                            </div>
-                            <div class="primary-player-bet">
-                                <p>Bet</p>
-                                <p>$10</p>
-                            </div>
-                        </div>
-                        <div class="message-container">
-                            <div class="message">
-                                <p>This is a short message.<br>This is a longer message.</p>
-                            </div>
-                        </div>
-                        <div class="total-container">
-                            <div class="primary-player-total">
-                                <p>Will</p>
-                                <p>6/16<br>21</p>
-                            </div>
-                            <div class="dealer-total">
-                                <p>Dealer</p>
-                                <p>17</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-container">
-                        <!-- <div class="sit-container">
-                            <button class="sit-button">Sit</button>
-                            <button class="in-button">I'm in</button>
-                            <button class="out-button">I'm out</button>
-                        </div> -->
-                        <!-- <div class="bet-container">
-                            <input class="bet-input" type="number" min="0" max="1000" placeholder="Amount">
-                            <button class="bet-button">Bet</button>
-                        </div> -->
-                        <div class="action-container">
-                            <button class="split-button gold">Split</button>
-                            <button class="double-button gold">Double</button>
-                            <button class="hit-button gold">Hit</button>
-                            <button class="stand-button gold">Stand</button>
-                            <button class="surrender-button gold">Surrender</button>
-                        </div>
-                    </div>
-                    <div class="player-container">
-                        <div class="player">
-                            <div class="seat"></div>
-                            <div class="player-info">
-                                <p class="player-name">Avery</p>
-                                <div class="player-stats">
-                                    <p class="player-chips">$1000</p>
-                                    <p class="player-bet">$10</p>
-                                    <p class="player-total">16</p>
-                                </div>
-                            </div>
-                            <div class="hand">
-                                <div class="card ace spades deal"></div>
-                                <div class="card two spades deal"></div>
-                            </div>
-                        </div>
-                        <div class="player active">
-                            <div class="seat"></div>
-                            <div class="player-info">
-                                <p class="player-name">Lisa</p>
-                                <div class="player-stats">
-                                    <p class="player-chips">$1000</p>
-                                    <p class="player-bet">$10</p>
-                                    <p class="player-total">4/14<br>17</p>
-                                </div>
-                            </div>
-                            <div class="hand">
-                                <div class="split-hand active">
+        <div id="page-container">
+            <div id="main-container">
+                <!-- <h1>Blackjack.io</h1> -->
+                <div id="table-container">
+                    <div id="table1" class="table">
+                        <h1>Table 1</h1>
+                        <div class="dealer-container">
+                            <div class="dealer">
+                                <div class="hand">
                                     <div class="card ace spades deal"></div>
-                                    <div class="card two spades deal"></div>
+                                    <div class="card back flip"></div>
                                 </div>
-                                <div class="split-hand">
+                            </div>
+                        </div>
+                        <div class="hud-container">
+                            <div class="money-container">
+                                <div class="primary-player-chips">
+                                    <p>Chips</p>
+                                    <p>$1000</p>
+                                </div>
+                                <div class="primary-player-bet">
+                                    <p>Bet</p>
+                                    <p>$10</p>
+                                </div>
+                            </div>
+                            <div class="message-container">
+                                <div class="message">
+                                    <p>This is a short message.<br>This is a longer message.</p>
+                                </div>
+                            </div>
+                            <div class="total-container">
+                                <div class="primary-player-total">
+                                    <p>Will</p>
+                                    <p>6/16<br>21</p>
+                                </div>
+                                <div class="dealer-total">
+                                    <p>Dealer</p>
+                                    <p>17</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="sit-container">
+                                <button class="sit-button silver">Sit</button>
+                                <button class="in-button silver">I'm in</button>
+                                <button class="out-button silver">I'm out</button>
+                            </div>
+                            <div class="bet-container hide">
+                                <input class="bet-input silver" type="number" min="0" max="1000" placeholder="Amount">
+                                <button class="bet-button silver">Bet</button>
+                            </div>
+                            <div class="action-container hide">
+                                <button class="split-button gold">Split</button>
+                                <button class="double-button gold">Double</button>
+                                <button class="hit-button gold">Hit</button>
+                                <button class="stand-button gold">Stand</button>
+                                <button class="surrender-button gold">Surrender</button>
+                            </div>
+                        </div>
+                        <div class="player-container">
+                            <div class="player">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Avery</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">16</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
                                     <div class="card ace spades deal"></div>
                                     <div class="card two spades deal"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="player primary">
-                            <div class="seat"></div>
-                            <div class="player-info">
-                                <p class="player-name">Will</p>
-                                <div class="player-stats">
-                                    <p class="player-chips">$1000</p>
-                                    <p class="player-bet">$10</p>
-                                    <p class="player-total">6/16<br>21</p>
+                            <div class="player active">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Lisa</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">4/14<br>17</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="split-hand active">
+                                        <div class="card ace spades deal"></div>
+                                        <div class="card two spades deal"></div>
+                                    </div>
+                                    <div class="split-hand">
+                                        <div class="card ace spades deal"></div>
+                                        <div class="card two spades deal"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="hand">
-                                <div class="card ace spades deal"></div>
-                                <div class="card two spades deal"></div>
-                            </div>
-                        </div>
-                        <div class="player">
-                            <div class="seat"></div>
-                            <div class="player-info">
-                                <p class="player-name">Tyler</p>
-                                <div class="player-stats">
-                                    <p class="player-chips">$1000</p>
-                                    <p class="player-bet">$10</p>
-                                    <p class="player-total">16</p>
+                            <div class="player primary">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Will</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">6/16<br>21</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="card ace spades deal"></div>
+                                    <div class="card two spades deal"></div>
                                 </div>
                             </div>
-                            <div class="hand">
-                                <div class="card ace spades deal"></div>
-                                <div class="card two spades deal"></div>
-                            </div>
-                        </div>
-                        <div class="player">
-                            <div class="seat"></div>
-                            <div class="player-info">
-                                <p class="player-name">Dan</p>
-                                <div class="player-stats">
-                                    <p class="player-chips">$1000</p>
-                                    <p class="player-bet">$10</p>
-                                    <p class="player-total">16</p>
+                            <div class="player">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Tyler</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">16</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="card ace spades deal"></div>
+                                    <div class="card two spades deal"></div>
                                 </div>
                             </div>
-                            <div class="hand">
-                                <div class="card ace spades deal"></div>
-                                <div class="card two spades deal"></div>
+                            <div class="player">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Dan</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">16</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="card ace spades deal"></div>
+                                    <div class="card two spades deal"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="table2" class="table">
+                        <h1>Table 2</h1>
+                        <div class="dealer-container">
+                            <div class="dealer">
+                                <div class="hand">
+                                    <div class="card ace spades deal"></div>
+                                    <div class="card back flip"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hud-container">
+                            <div class="money-container">
+                                <div class="primary-player-chips">
+                                    <p>Chips</p>
+                                    <p>$1000</p>
+                                </div>
+                                <div class="primary-player-bet">
+                                    <p>Bet</p>
+                                    <p>$10</p>
+                                </div>
+                            </div>
+                            <div class="message-container">
+                                <div class="message">
+                                    <p>This is a short message.<br>This is a longer message.</p>
+                                </div>
+                            </div>
+                            <div class="total-container">
+                                <div class="primary-player-total">
+                                    <p>Will</p>
+                                    <p>6/16<br>21</p>
+                                </div>
+                                <div class="dealer-total">
+                                    <p>Dealer</p>
+                                    <p>17</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="sit-container hide">
+                                <button class="sit-button silver">Sit</button>
+                                <button class="in-button silver">I'm in</button>
+                                <button class="out-button silver">I'm out</button>
+                            </div>
+                            <div class="bet-container">
+                                <input class="bet-input silver" type="number" min="0" max="1000" placeholder="Amount">
+                                <button class="bet-button silver">Bet</button>
+                            </div>
+                            <div class="action-container hide">
+                                <button class="split-button gold">Split</button>
+                                <button class="double-button gold">Double</button>
+                                <button class="hit-button gold">Hit</button>
+                                <button class="stand-button gold">Stand</button>
+                                <button class="surrender-button gold">Surrender</button>
+                            </div>
+                        </div>
+                        <div class="player-container">
+                            <div class="player">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Avery</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">16</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="card ace spades deal"></div>
+                                    <div class="card two spades deal"></div>
+                                </div>
+                            </div>
+                            <div class="player active">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Lisa</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">4/14<br>17</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="split-hand active">
+                                        <div class="card ace spades deal"></div>
+                                        <div class="card two spades deal"></div>
+                                    </div>
+                                    <div class="split-hand">
+                                        <div class="card ace spades deal"></div>
+                                        <div class="card two spades deal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="player primary">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Will</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">6/16<br>21</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="card ace spades deal"></div>
+                                    <div class="card two spades deal"></div>
+                                </div>
+                            </div>
+                            <div class="player">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Tyler</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">16</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="card ace spades deal"></div>
+                                    <div class="card two spades deal"></div>
+                                </div>
+                            </div>
+                            <div class="player">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Dan</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">16</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="card ace spades deal"></div>
+                                    <div class="card two spades deal"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="table3" class="table">
+                        <h1>Table 3</h1>
+                        <div class="dealer-container">
+                            <div class="dealer">
+                                <div class="hand">
+                                    <div class="card ace spades deal"></div>
+                                    <div class="card back flip"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hud-container">
+                            <div class="money-container">
+                                <div class="primary-player-chips">
+                                    <p>Chips</p>
+                                    <p>$1000</p>
+                                </div>
+                                <div class="primary-player-bet">
+                                    <p>Bet</p>
+                                    <p>$10</p>
+                                </div>
+                            </div>
+                            <div class="message-container">
+                                <div class="message">
+                                    <p>This is a short message.<br>This is a longer message.</p>
+                                </div>
+                            </div>
+                            <div class="total-container">
+                                <div class="primary-player-total">
+                                    <p>Will</p>
+                                    <p>6/16<br>21</p>
+                                </div>
+                                <div class="dealer-total">
+                                    <p>Dealer</p>
+                                    <p>17</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="sit-container hide">
+                                <button class="sit-button silver">Sit</button>
+                                <button class="in-button silver">I'm in</button>
+                                <button class="out-button silver">I'm out</button>
+                            </div>
+                            <div class="bet-container hide">
+                                <input class="bet-input silver" type="number" min="0" max="1000" placeholder="Amount">
+                                <button class="bet-button silver">Bet</button>
+                            </div>
+                            <div class="action-container">
+                                <button class="split-button gold">Split</button>
+                                <button class="double-button gold">Double</button>
+                                <button class="hit-button gold">Hit</button>
+                                <button class="stand-button gold">Stand</button>
+                                <button class="surrender-button gold">Surrender</button>
+                            </div>
+                        </div>
+                        <div class="player-container">
+                            <div class="player">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Avery</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">16</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="card ace spades deal"></div>
+                                    <div class="card two spades deal"></div>
+                                </div>
+                            </div>
+                            <div class="player active">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Lisa</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">4/14<br>17</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="split-hand active">
+                                        <div class="card ace spades deal"></div>
+                                        <div class="card two spades deal"></div>
+                                    </div>
+                                    <div class="split-hand">
+                                        <div class="card ace spades deal"></div>
+                                        <div class="card two spades deal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="player primary">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Will</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">6/16<br>21</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="card ace spades deal"></div>
+                                    <div class="card two spades deal"></div>
+                                </div>
+                            </div>
+                            <div class="player">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Tyler</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">16</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="card ace spades deal"></div>
+                                    <div class="card two spades deal"></div>
+                                </div>
+                            </div>
+                            <div class="player">
+                                <div class="seat"></div>
+                                <div class="player-info">
+                                    <p class="player-name">Dan</p>
+                                    <div class="player-stats">
+                                        <p class="player-chips">$1000</p>
+                                        <p class="player-bet">$10</p>
+                                        <p class="player-total">16</p>
+                                    </div>
+                                </div>
+                                <div class="hand">
+                                    <div class="card ace spades deal"></div>
+                                    <div class="card two spades deal"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="table2" class="table">
-                    <h1>Table 2</h1>
-                    <div class="dealer-container">
-                        <div class="dealer">
-                            <div class="hand">
-                                <div class="card ace spades deal"></div>
-                                <div class="card back flip"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hud-container">
-                        <div class="money-container">
-                            <div class="primary-player-chips">
-                                <p>Chips</p>
-                                <p>$1000</p>
-                            </div>
-                            <div class="primary-player-bet">
-                                <p>Bet</p>
-                                <p>$10</p>
-                            </div>
-                        </div>
-                        <div class="message-container">
-                            <div class="message">
-                                <p>This is a short message.<br>This is a longer message.</p>
-                            </div>
-                        </div>
-                        <div class="total-container">
-                            <div class="primary-player-total">
-                                <p>Will</p>
-                                <p>6/16<br>21</p>
-                            </div>
-                            <div class="dealer-total">
-                                <p>Dealer</p>
-                                <p>17</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-container">
-                        <!-- <div class="sit-container">
-                            <button class="sit-button">Sit</button>
-                            <button class="in-button">I'm in</button>
-                            <button class="out-button">I'm out</button>
-                        </div> -->
-                        <!-- <div class="bet-container">
-                            <input class="bet-input" type="number" min="0" max="1000" placeholder="Amount">
-                            <button class="bet-button">Bet</button>
-                        </div> -->
-                        <div class="action-container">
-                            <button class="split-button gold">Split</button>
-                            <button class="double-button gold">Double</button>
-                            <button class="hit-button gold">Hit</button>
-                            <button class="stand-button gold">Stand</button>
-                            <button class="surrender-button gold">Surrender</button>
-                        </div>
-                    </div>
-                    <div class="player-container">
-                        <div class="player">
-                            <div class="seat"></div>
-                            <div class="player-info">
-                                <p class="player-name">Avery</p>
-                                <div class="player-stats">
-                                    <p class="player-chips">$1000</p>
-                                    <p class="player-bet">$10</p>
-                                    <p class="player-total">16</p>
-                                </div>
-                            </div>
-                            <div class="hand">
-                                <div class="card ace spades deal"></div>
-                                <div class="card two spades deal"></div>
-                            </div>
-                        </div>
-                        <div class="player active">
-                            <div class="seat"></div>
-                            <div class="player-info">
-                                <p class="player-name">Lisa</p>
-                                <div class="player-stats">
-                                    <p class="player-chips">$1000</p>
-                                    <p class="player-bet">$10</p>
-                                    <p class="player-total">4/14<br>17</p>
-                                </div>
-                            </div>
-                            <div class="hand">
-                                <div class="split-hand active">
-                                    <div class="card ace spades deal"></div>
-                                    <div class="card two spades deal"></div>
-                                </div>
-                                <div class="split-hand">
-                                    <div class="card ace spades deal"></div>
-                                    <div class="card two spades deal"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="player primary">
-                            <div class="seat"></div>
-                            <div class="player-info">
-                                <p class="player-name">Will</p>
-                                <div class="player-stats">
-                                    <p class="player-chips">$1000</p>
-                                    <p class="player-bet">$10</p>
-                                    <p class="player-total">6/16<br>21</p>
-                                </div>
-                            </div>
-                            <div class="hand">
-                                <div class="card ace spades deal"></div>
-                                <div class="card two spades deal"></div>
-                            </div>
-                        </div>
-                        <div class="player">
-                            <div class="seat"></div>
-                            <div class="player-info">
-                                <p class="player-name">Tyler</p>
-                                <div class="player-stats">
-                                    <p class="player-chips">$1000</p>
-                                    <p class="player-bet">$10</p>
-                                    <p class="player-total">16</p>
-                                </div>
-                            </div>
-                            <div class="hand">
-                                <div class="card ace spades deal"></div>
-                                <div class="card two spades deal"></div>
-                            </div>
-                        </div>
-                        <div class="player">
-                            <div class="seat"></div>
-                            <div class="player-info">
-                                <p class="player-name">Dan</p>
-                                <div class="player-stats">
-                                    <p class="player-chips">$1000</p>
-                                    <p class="player-bet">$10</p>
-                                    <p class="player-total">16</p>
-                                </div>
-                            </div>
-                            <div class="hand">
-                                <div class="card ace spades deal"></div>
-                                <div class="card two spades deal"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div id="debug-container">
+                <button id="debug-button-1">Button 1</button>
+                <button id="debug-button-2">Button 2</button>
+                <button id="debug-button-3">Button 3</button>
+                <button id="debug-button-1">Button 1</button>
+                <button id="debug-button-2">Button 2</button>
+                <button id="debug-button-3">Button 3</button>
+                <button id="debug-button-1">Button 1</button>
+                <button id="debug-button-2">Button 2</button>
+                <button id="debug-button-3">Button 3</button>
+                <button id="debug-button-1">Button 1</button>
+                <button id="debug-button-2">Button 2</button>
+                <button id="debug-button-3">Button 3</button>
+                <button id="debug-button-1">Button 1</button>
+                <button id="debug-button-2">Button 2</button>
+                <button id="debug-button-3">Button 3</button>
+                <button id="debug-button-1">Button 1</button>
+                <button id="debug-button-2">Button 2</button>
+                <button id="debug-button-3">Button 3</button>
+                <button id="debug-button-1">Button 1</button>
+                <button id="debug-button-2">Button 2</button>
+                <button id="debug-button-3">Button 3</button>
             </div>
             <div id="menu">
                 <i id="info-menu-item" class="fas fa-info-circle"></i>
@@ -300,11 +464,6 @@
                 <i id="sound-menu-item" class="fas fa-volume-up"></i>
                 <i id="quit-menu-item" class="fas fa-sign-out-alt"></i>
             </div>
-        </div>
-        <div id="debug-container">
-            <button id="debug-button-1">Button 1</button>
-            <button id="debug-button-2">Button 2</button>
-            <button id="debug-button-3">Button 3</button>
         </div>
         <div id="popup-container">
             <div id="insurance-popup">
