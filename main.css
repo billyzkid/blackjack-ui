@@ -86,7 +86,8 @@ button {
 }
 
 button:focus,
-button:hover:enabled {
+button:hover:enabled,
+button:active:enabled {
     background-size: 150% 150%;
 }
 
@@ -167,7 +168,7 @@ button.silver:active:enabled {
     flex-direction: column;
     flex-shrink: 0;
     font-size: 0.8em;
-    padding: 0.2em;
+    padding: 0.3em;
     border-left: 1px solid #d0d0d0;
     background-color: #f3f3f3;
     overflow: auto;
@@ -179,7 +180,15 @@ button.silver:active:enabled {
     font-weight: normal;
     color: black;
     text-shadow: none;
-    margin: 0.2em;
+    background: none;
+    transition: none;
+    margin: 0.1em;
+}
+
+#debug-container > button:focus,
+#debug-container > button:hover:enabled,
+#debug-container > button:active:enabled {
+    background-color: #ddd;
 }
 
 #menu {
