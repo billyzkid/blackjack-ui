@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    const INITIAL_STATE = "initial";
-
+    const imagePath = '../images/';
+    const cardImagePath = `${imagePath}cards/`;
     const cardSuits = [ 'Spades', 'Hearts', 'Clubs', 'Diamonds' ];
     const cardRanks = [ 'Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King' ];
     const cardValues = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 ];
@@ -31,7 +31,7 @@ $(document).ready(function() {
     $('#no-quit-button').on('click', () => $('#quit-popup').popup('hide'));
 
     $('#debug-container > button:nth-child(1)').on('click', () => setTitle('Blackjack.io'));
-    $('#debug-container > button:nth-child(2)').on('click', () => setState(INITIAL_STATE));
+    $('#debug-container > button:nth-child(2)').on('click', () => setState('initial'));
 
     function setTitle(title) {
         $('#table1 > h1').text(title);
@@ -46,7 +46,7 @@ $(document).ready(function() {
 
         cardSuits.forEach((suit, suitIndex) => {
             cardRanks.forEach((rank, rankIndex) => {
-                const card = { suit, rank, value: cardValues[rankIndex], imageUrl: `images/cards/front-${cardRanks.length * suitIndex + rankIndex}.png` };
+                const card = { suit, rank, value: cardValues[rankIndex], imageUrl: `${cardImagePath}front-${cardRanks.length * suitIndex + rankIndex}.png` };
                 deck.push(card);
             });
         });
@@ -75,7 +75,7 @@ $(document).ready(function() {
     }
     
     function preloadImages() {
-        const imageUrls = [ 'images/cards/back.png' ].concat(deck.map((card) => card.imageUrl));
+        const imageUrls = [ `${cardImagePath}back.png` ].concat(deck.map((card) => card.imageUrl));
         const imageLinks = imageUrls.map((imageUrl) => $('<link>', { 'rel': 'preload', 'href': imageUrl, 'as': 'image' }));
         
         $('head').append(imageLinks);
