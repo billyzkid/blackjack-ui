@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    const INITIAL_STATE = "initial";
+
     const cardSuits = [ 'Spades', 'Hearts', 'Clubs', 'Diamonds' ];
     const cardRanks = [ 'Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King' ];
     const cardValues = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 ];
@@ -18,6 +20,7 @@ $(document).ready(function() {
     $('#sound-popup').popup({ openelement: '#sound-menu-item', onopen: () => $('#sound-menu-item').addClass('active'), onclose: () => $('#sound-menu-item').removeClass('active') });
     $('#quit-popup').popup({ openelement: '#quit-menu-item', onopen: () => $('#quit-menu-item').addClass('active'), onclose: () => $('#quit-menu-item').removeClass('active') });
     
+    // This container is only necessary to hide initial rendering before popups are initialized
     $('#popup-container').remove();
 
     $('#yes-insurance-button').on('click', () => $('#insurance-popup').popup('hide'));
@@ -26,6 +29,17 @@ $(document).ready(function() {
     $('#edit-name-button').on('click', () => $('#edit-user-popup').popup('hide'));
     $('#yes-quit-button').on('click', () => $('#quit-popup').popup('hide'));
     $('#no-quit-button').on('click', () => $('#quit-popup').popup('hide'));
+
+    $('#debug-container > button:nth-child(1)').on('click', () => setTitle('Blackjack.io'));
+    $('#debug-container > button:nth-child(2)').on('click', () => setState(INITIAL_STATE));
+
+    function setTitle(title) {
+        $('#table1 > h1').text(title);
+    }
+
+    function setState(state) {
+        $("#table1").addClass(state);
+    }
 
     function createDeck() {
         const deck = [];
