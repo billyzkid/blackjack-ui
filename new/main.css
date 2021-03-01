@@ -3,8 +3,7 @@ body {
     height: 100%;
 }
 
-.hide,
-.release #debug-menu {
+.hide {
     display: none !important;
 }
 
@@ -142,7 +141,7 @@ button.silver:active:enabled {
 }
 
 #debug-menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     flex-shrink: 0;
     font-size: 0.8em;
@@ -150,6 +149,10 @@ button.silver:active:enabled {
     border-left: 1px solid #d0d0d0;
     background-color: #f3f3f3;
     overflow: auto;
+}
+
+.debug #debug-menu {
+    display: flex;
 }
 
 #debug-menu > button {
